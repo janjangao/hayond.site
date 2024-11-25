@@ -7,6 +7,7 @@ export default function Home() {
       <Head>
         <link rel="stylesheet" href="origin/styles.css" />
         <link rel="icon" href="origin/logo.png" />
+        <meta name="LDR" content="origin/LDR_LLL1_0.png" />
       </Head>
 
       <canvas></canvas>

@@ -928,7 +928,8 @@ let bloomFramebuffers = [];
 let sunrays;
 let sunraysTemp;
 
-let ditheringTexture = createTextureAsync('origin/LDR_LLL1_0.png');
+let LDR_URL = document.querySelector("meta[name=LDR]").getAttribute("content")
+let ditheringTexture = createTextureAsync(LDR_URL);
 
 const blurProgram            = new Program(blurVertexShader, blurShader);
 const copyProgram            = new Program(baseVertexShader, copyShader);

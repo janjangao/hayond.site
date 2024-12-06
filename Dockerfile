@@ -8,7 +8,7 @@ RUN deno compile --include static/ --include _fresh/ --include deno.json --inclu
 
 FROM scratch
 
-COPY --from=0 hayond.site /hayond.site
+COPY --from=0 /workspaces/hayond.site /hayond.site
 
 EXPOSE 8000
 

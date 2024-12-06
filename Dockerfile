@@ -11,4 +11,4 @@ COPY --from=0 /main /main
 
 EXPOSE 8000
 
-ENTRYPOINT ./main
+ENTRYPOINT ["/main"]

@@ -11,14 +11,9 @@ export default function Home() {
       </Head>
 
       <canvas></canvas>
-      <div style="position: absolute; bottom: 0; width: 100%; text-align: center">
+      <div class="absolute bottom-0 w-full text-center">
         <a
-          style="
-          text-decoration: none;
-          font-size: 12px;
-          color: #bbb;
-          mix-blend-mode: difference;
-        "
+          class="no-underline text-xs text-[#bbb] mix-blend-difference"
           href="https://beian.miit.gov.cn/shouye.html"
           target="_blank"
         >

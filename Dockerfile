@@ -7,10 +7,4 @@ COPY  . .
 RUN deno task build
 RUN deno compile  -o ./main --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts
 
-FROM denoland/deno:alpine
-
-COPY --from=0 /workdir/main .
-
-EXPOSE 8000
-
 ENTRYPOINT ./main

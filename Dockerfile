@@ -3,13 +3,13 @@ MAINTAINER Jan Gao <focussellingcute30years@gmail.com>
 
 COPY  . .
 RUN deno task build
-RUN deno compile --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts
-RUN ls
+RUN deno compile --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts -o main/main
+RUN ls main
 
 FROM scratch
 
-COPY --from=0 /hayond.site /hayond.site
+COPY --from=0 /main /main
 
 EXPOSE 8000
 
-ENTRYPOINT ./hayond.site
+ENTRYPOINT ./main

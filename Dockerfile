@@ -3,7 +3,8 @@ MAINTAINER Jan Gao <focussellingcute30years@gmail.com>
 
 COPY  . .
 RUN deno task build
-RUN deno compile --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts
+RUN deno compile --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts -o testtest
+RUN ls
 
 FROM scratch
 

@@ -14,4 +14,4 @@ RUN ls
 
 EXPOSE 8000
 
-ENTRYPOINT ["/main"]
+ENTRYPOINT ./main

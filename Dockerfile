@@ -1,10 +1,14 @@
 FROM denoland/deno:alpine
 MAINTAINER Jan Gao <focussellingcute30years@gmail.com>
 
+WORKDIR /workdir
+
 COPY  . .
-RUN deno task build
-RUN deno compile --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts -o testtest
 RUN ls
+RUN deno task build
+RUN deno compile  -o ./main --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts
+RUN ls
+RUN ls workdir
 
 FROM scratch
 

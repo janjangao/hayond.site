@@ -8,7 +8,6 @@ RUN deno compile  -o ./main --include static/ --include _fresh/ --include deno.j
 
 FROM gcr.io/distroless/cc
 
-WORKDIR /workdir
 COPY --from=0 /workdir/main .
 
 EXPOSE 8000

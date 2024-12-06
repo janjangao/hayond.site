@@ -7,9 +7,10 @@ COPY  . .
 RUN deno task build
 RUN deno compile  -o ./main --include static/ --include _fresh/ --include deno.json --include fresh.gen.ts -A main.ts
 
-FROM scratch
+FROM busybox
 
 COPY --from=0 /workdir/main .
+RUN ls
 
 EXPOSE 8000
 
